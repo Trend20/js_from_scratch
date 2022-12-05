@@ -131,12 +131,12 @@ operator to get a new object with certain properties omitted. eslint: prefer-obj
 */
 // very bad
 const original1 = { a: 1, b: 2 };
-const copy1 = Object.assign(original, { c: 3 }); // this mutates `original` ಠ_ಠ
-delete copy.a; // so does this
+const copy1 = Object.assign(original1, { c: 3 }); // this mutates `original` ಠ_ಠ
+delete copy1.a; // so does this
 
 // bad
 const original2 = { a: 1, b: 2 };
-const copy2 = Object.assign({}, original, { c: 3 }); // copy => { a: 1, b: 2, c: 3 }
+const copy2 = Object.assign({}, original2, { c: 3 }); // copy => { a: 1, b: 2, c: 3 }
 
 // good
 const original = { a: 1, b: 2 };
