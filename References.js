@@ -1,5 +1,5 @@
 /* 
-  Avoid using var and used const to reference your variables.
+  Avoid using var and use const to reference your variables.
 
   Why? This ensures that you can’t reassign your references, which can lead to bugs and difficult to comprehend code.
 */
