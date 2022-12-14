@@ -4,14 +4,14 @@ These are concepts that are aimed at solving commonly recurring software archite
 
 There are different types of Design Patterns that can be used in Javascript.
 
-### Module Pattern
+#### 1. Module Pattern
 
-### Singleton Pattern
+#### 2. Singleton Pattern
 
-### Prototype Pattern
+#### 3. Prototype Pattern
 
-### Proxy Pattern
+#### 4. Proxy Pattern
 
-### Observer Pattern
+#### 5. Observer Pattern
 
-### Factory Pattern
+#### 6. Factory Pattern
