@@ -36,7 +36,7 @@ The module pattern provides a way to have both public and private pieces with th
   <!-- input.js -->
 
   export function validateInput(input){
-    if(typeOf input !== "number"){
+    if(typeof input !== "number"){
       throw Error("Invalid Input");
     }
   }
@@ -46,8 +46,8 @@ The module pattern provides a way to have both public and private pieces with th
   <!-- module3  -->
   <!-- index.js -->
 
-  import { validateInput } from './input'
-  import { add, subtract, multiply, divide } from './math';
+  import { validateInput } from './input.js'
+  import { add, subtract, multiply, divide } from './math.js';
 ```
 
 In the above examples, only the exported values are accessible outside the module. The secreteABC variable is not accessible outside the `math.js` module since it is not exported.
