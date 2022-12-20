@@ -46,3 +46,55 @@ This built-in object makes it easy to manipulate the target object.
 Instead of accessing object properties like `obj[prop]` or setting properties like `obj[prop] = value` , we can
 access or modify the properties on the target object through `Reflect.get(target, prop)` or set through `Reflect.set(target, prop, value)`
 The methods receive the same arguments as the methods on the handler object.
+
+## Example
+
+#### Using the normal way of getting and setting properties
+
+```
+<!-- main object -->
+const person={
+  name: 'mike',
+  age: 23,
+  origin: 'Africa',
+  email: 'mike@mail.com'
+}
+
+const personProxy = new Proxy(person, {
+  get: (target, prop) =>{
+    return target[prop]
+  },
+
+  set: (target, prop, value) =>{
+    target[prop] = value
+    return true;
+  }
+})
+```
+
+#### Using Reflect for getting and setting properties
+
+```
+<!-- main object -->
+const person={
+  name: 'mike',
+  age: 23,
+  origin: 'Africa',
+  email: 'mike@mail.com'
+}
+
+const personProxy = new Proxy(person, {
+  get: (target, prop) =>{
+    return Reflect.get(target, prop);
+  },
+
+  set: (target, prop, value) =>{
+    return Reflect.get(target, prop, value);
+  }
+})
+```
+
+### Tradeoffs
+
+Control: Proxies makes it easy to add functionalities when interacting with certain objects.
+Long handler execution: Executing handlers on every object interaction could lead to performance issues.
