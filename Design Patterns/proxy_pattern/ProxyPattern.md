@@ -39,3 +39,10 @@ const personProxy= new Proxy(person, {
   }
 })
 ```
+
+### Reflect
+
+This built-in object makes it easy to manipulate the target object.
+Instead of accessing object properties like `obj[prop]` or setting properties like `obj[prop] = value` , we can
+access or modify the properties on the target object through `Reflect.get(target, prop)` or set through `Reflect.set(target, prop, value)`
+The methods receive the same arguments as the methods on the handler object.
